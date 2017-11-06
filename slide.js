@@ -9,9 +9,13 @@ $.fn.extend({
         }else{
             lb.fade = true;
         }
-        lb.autoPlay = lb.autoPlay || false;
+        if(lb.autoPlay === undefined){
+            lb.autoPlay = true;
+        }
         lb.autoPlaySpeed = lb.autoPlaySpeed || 3000;
-        lb.dot = lb.dot || false;
+        if(lb.dot === undefined){
+            lb.dot = true;
+        }
         lb.dotColor = lb.dotColor || "#3963ec";
 
         //获取图片的个数并初始化
